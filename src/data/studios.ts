@@ -5,6 +5,8 @@ export type Studio = {
   city: string
   address?: string
   services: string[]
+  /** Public studio-specific prices, when the studio publishes them. */
+  publishedPrices?: Record<string, string>
   image: string
   site: string
   photoSource?: string
@@ -35,7 +37,7 @@ export const studios: Studio[] = [
   { id:'devils-jaipur', name:'Detailing Devils', area:'Mansarovar, Sector 4', city:'Jaipur', services:['Detailing','Ceramic coating','PPF','Graphene coating'], image:'https://www.detailingdevils.com/uploads/studio/th/jaipur-3.0.webp', site:'https://www.detailingdevils.com/detailing-studios/Jaipur-3.0' },
   { id:'devils-jaipur-vaishali', name:'Detailing Devils', area:'Vaishali Nagar', city:'Jaipur', address:'E8, Hanuman Nagar, Vaishali Marg, Rajendra Nagar, Jaipur', services:['Detailing','Ceramic coating','PPF','Car wash'], image:'https://www.detailingdevils.com/uploads/studio/jaipur4.webp', site:'https://www.detailingdevils.com/detailing-studios/jaipur' },
   { id:'careager-sector-35', name:'CarEager Detailing Studio', area:'Sector 35', city:'Gurugram', services:['Detailing','Ceramic coating','PPF','Paint correction'], image:'https://www.careager.com/_next/image?q=75&url=%2Fimages%2Fhome%2Fcareager-hero-plates.webp&w=1920', site:'https://www.careager.com/' },
-  { id:'carzspa-gurgaon', name:'CarzSpa · The Madmax Detailing Studio', area:'Gurugram', city:'Gurugram', services:['Detailing','Ceramic coating','PPF','Interior care'], image:'https://www.carzspa.com/wp-content/uploads/2021/06/DSC03280-scaled.jpg', site:'https://www.carzspa.com/studios/gurgaon/' },
+  { id:'carzspa-gurgaon', name:'CarzSpa · The Madmax Detailing Studio', area:'Gurugram', city:'Gurugram', services:['Detailing','Ceramic coating','PPF','Interior care'], publishedPrices:{'Ceramic coating':'Lite: ₹12,950–₹15,950 · Trinity 9H: ₹19,950–₹22,950 · Pentagon 10H: ₹26,950–₹29,950 · 10 Impact: ₹34,950–₹39,950 (vehicle category dependent)'}, image:'https://www.carzspa.com/wp-content/uploads/2021/06/DSC03280-scaled.jpg', site:'https://www.carzspa.com/studios/gurgaon/' },
   { id:'lords-wazirabad', name:'Lords of Detailing', area:'Wazirabad', city:'Gurugram', services:['Detailing','Ceramic coating','PPF','Paint correction'], image:'https://lordsofdetailing.com/omniverse/assets/uploads/franchise/wazirabad-gurugram-5-702.webp', site:'https://lordsofdetailing.com/wazirabad-gurugram' },
   { id:'car-studio-gurgaon', name:'The Car Studio · Premium Car Care', area:'Sector 69', city:'Gurugram', address:'Next to Tulip Violet, G4 Arcade, Sector 69, Gurugram 122101', services:['Detailing','Ceramic coating','PPF','Car wash'], image:'https://im.whatshot.in/img/2022/Aug/body-image-1-1661425982.jpg', site:'https://www.thecarstudiogurgaon.com/', photoSource:'https://www.whatshot.in/delhi-ncr/6-best-places-for-car-detailing-in-gurgaon-that-you-should-know-about-v-176028' },
   { id:'carbon-chrome-pune', name:'Carbon & Chrome Automotive Studio', area:'Viman Nagar', city:'Pune', address:'Shop 3 & 4, 30/8A/1, Ramwadi, Viman Nagar, Pune 411014', services:['Detailing','Ceramic coating','PPF','Vinyl wraps'], image:'https://static.wixstatic.com/media/780b30_429c42a04f8e4e98998391c4109e2213~mv2.jpg/v1/fill/w_1920%2Ch_1080%2Cal_c/780b30_429c42a04f8e4e98998391c4109e2213~mv2.jpg', site:'https://www.carbonandchrome.in/' },
