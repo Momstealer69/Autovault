@@ -5,7 +5,7 @@ Premium automotive service discovery and vehicle ownership frontend using React,
 ## Run locally
 
 1. Install Node.js 20.19+ or 22.12+.
-2. Copy `.env.example` to `.env.local`; set the Supabase project URL and publishable/anon key.
+2. Copy `.env.example` to `.env.local` only if you are connecting Supabase. Studio discovery uses bundled directory data and does not require a Maps integration.
 3. Run `npm install`, `npm run dev`. `npm run build` checks TypeScript and produces the deployable bundle.
 4. Apply `supabase/migrations/202610210001_core.sql` with the Supabase CLI (`supabase db push`) or SQL editor.
 5. Deploy Edge Functions and set secrets:
@@ -21,10 +21,10 @@ Set `SUPABASE_URL`, `SUPABASE_ANON_KEY`, and `SUPABASE_SERVICE_ROLE_KEY` through
 
 ## Included now
 
-- Responsive premium dark-first landing, discovery/search/category filtering, preview business cards, account sign-up/login/reset-password forms, and authenticated garage vehicle create/list flow.
+- Responsive premium dark-first landing, searchable directory of real studios with sourced photos and direct links, plus a browser-local vehicle garage that needs no sign-in.
 - Supabase client configuration, auth profile trigger, core database tables, RLS policies, private vehicle storage bucket policy, and an advisory-locked booking hold RPC. The RPC accepts only the package's server-stored price and serializes competing reservations for a business.
 - Razorpay server-side order creation, checkout-signature validation plus provider-side captured-payment lookup, and signed webhook handling. Amount, INR currency, booking ownership, payment idempotency, and hold expiry are checked server-side.
-- Explicit preview data is labeled as sample and is never shown with a verified badge. Live discovery reads only database-verified listings.
+- Studio listings are compiled from public business websites and linked to their sources. AutoVault has not independently verified these businesses or the current status of their details.
 
 ## Before launch
 
