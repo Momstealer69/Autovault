@@ -1,0 +1,4 @@
+Asset: public/images/autovault-cinematic-car.webp
+Source photo: Unsplash, "Un auto deportivo negro estacionado en un garaje" — https://unsplash.com/photos/eZSkUVdvr-M
+License: Unsplash License — https://unsplash.com/license (free use, including commercial use; no attribution required).
+The photograph is used as the site's static automotive visual and is darkened/cropped in CSS. CSS adds restrained reflection sweeps and camera drift; it does not simulate a 3D car or video.
